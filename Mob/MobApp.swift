@@ -9,9 +9,31 @@ import SwiftUI
 
 @main
 struct MobApp: App {
+    @Environment(\.scenePhase) var scenePhase
+    @StateObject var appModel = MobAppModel()
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            Group {
+                if appModel.logined {
+                    ContentView()
+                } else {
+                    LoginView()
+                }
+            }
+            .edgesIgnoringSafeArea(.all)
+            .onChange(of: scenePhase) { newPhase in
+                switch newPhase {
+                case .active:
+                    appModel.beInActive()
+                case .background:
+                    appModel.beInBackground()
+                case .inactive:
+                    appModel.beInInactive()
+                @unknown default:
+                    print("unknow default")
+                }
+            }
         }
     }
 }

@@ -9,7 +9,7 @@ import SwiftUI
 import Combine
 
 class MobAppModel: ObservableObject {
-    @Published var logined = false
+    @Published var logined: Bool? = nil
 
     private var subscribers: [AnyCancellable] = []
 
@@ -23,7 +23,12 @@ class MobAppModel: ObservableObject {
     func beInActive() {
         print("active")
         Task {
-            logined = try await MobbinManager.shared.retrieve()
+            do {
+                let res = try await MobbinManager.shared.retrieve()
+                logined = res
+            } catch {
+                print(error)
+            }
         }
     }
 
@@ -40,8 +45,12 @@ class MobAppModel: ObservableObject {
     func beInInactive() {
         print("inactive")
         Task {
-            try await MobbinManager.shared.update()
-            print("updated")
+            do {
+                try await MobbinManager.shared.update()
+                print("updated")
+            } catch {
+                print(error)
+            }
         }
     }
 }

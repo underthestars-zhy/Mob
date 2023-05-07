@@ -7,4 +7,4 @@
 
 import Combine
 
-let loginPublisher = CurrentValueSubject<Bool, Never>(false)
+let loginPublisher = CurrentValueSubject<Bool?, Never>(nil)

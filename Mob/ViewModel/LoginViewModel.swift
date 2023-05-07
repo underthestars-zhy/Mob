@@ -41,7 +41,7 @@ class LoginViewModel: ObservableObject {
             print("check code")
             do {
                 if try await mobbinAPI.verify(code: code) {
-                    print("verify code is write")
+                    print("verify code is right")
                     try MobbinManager.shared.save(userInfo: try mobbinAPI.retrieveUserInfo(), token: try mobbinAPI.retrieveToken())
                     status = .success
                     try await Task.sleep(for: .seconds(0.6))

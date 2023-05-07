@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import SwiftUIX
 
 @main
 struct MobApp: App {
@@ -15,10 +16,16 @@ struct MobApp: App {
     var body: some Scene {
         WindowGroup {
             Group {
-                if appModel.logined {
-                    ContentView()
+                if let login = appModel.logined {
+                    if login {
+                        ContentView()
+                    } else {
+                        LoginView()
+                    }
                 } else {
-                    LoginView()
+                    Image("Launch Screen")
+                        .scaledToFit()
+                        .frame(width: Screen.main.width)
                 }
             }
             .edgesIgnoringSafeArea(.all)

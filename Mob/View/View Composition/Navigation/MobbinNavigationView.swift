@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import SwiftUIX
 
 struct MobbinNavigationView<Content: View>: View {
     @StateObject var viewModel = NavigationViewModel()
@@ -22,12 +23,9 @@ struct MobbinNavigationView<Content: View>: View {
                     Color.clear
                         .frame(height: barHeight)
 
-                    Text("\(scrollValue.y)")
-                        .padding(.top, 30)
-
                     content()
+                        .padding(.top, 30)
                         .padding(.horizontal, 20)
-
                 }
                 .measureScroll { scroll in
                     scrollValue = scroll
@@ -36,9 +34,9 @@ struct MobbinNavigationView<Content: View>: View {
                     withAnimation(.easeInOut) {
                         if value.y <= 0 {
                             switch abs(value.y) {
-                            case 60...:
+                            case 50...:
                                 viewModel.stage = .minimal
-                            case 20..<60:
+                            case 20..<50:
                                 viewModel.stage = .smallHead
                             case 0..<20:
                                 viewModel.stage = .normal
@@ -54,6 +52,29 @@ struct MobbinNavigationView<Content: View>: View {
             .coordinateSpace(name: "scroll")
             .navigationBarHidden(true)
             .edgesIgnoringSafeArea(.all)
+        }
+        .overlay {
+            VStack(spacing: 0) {
+                HStack {
+                    VStack(alignment: .leading, spacing: 20) {
+                        MobbinPlatformPicker(largeTitle: viewModel.stage == .normal, platform: .ios, currentPlatform: $viewModel.platform)
+
+                        MobbinPlatformPicker(largeTitle: viewModel.stage == .normal, platform: .android, currentPlatform: $viewModel.platform)
+
+                        MobbinPlatformPicker(largeTitle: viewModel.stage == .normal, platform: .web, currentPlatform: $viewModel.platform)
+                    }
+
+                    Spacer()
+                }
+                .padding(.leading, 30)
+                .padding(.top, 160)
+
+                Spacer()
+            }
+            .animation(.easeInOut(duration: 2), value: viewModel.exntend)
+            .frame(maxWidth: Screen.width, maxHeight: Screen.height)
+            .background(Color.white.opacity(0.3).background(.ultraThinMaterial))
+            .opacity(viewModel.exntend ? 1 : 0)
         }
         .overlay(MobbinNavigationBar(barHeight: $barHeight))
         .frame(maxWidth: .infinity)

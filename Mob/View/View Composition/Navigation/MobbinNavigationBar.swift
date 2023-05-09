@@ -21,6 +21,7 @@ struct MobbinNavigationBar: View {
                     Spacer()
 
                     MobbinAvatarView()
+                        .transition(.opacity.animation(.easeInOut))
                         .opacity(viewModel.exntend ? 0 : 1)
                 }
                 .padding(.horizontal, 30)
@@ -42,9 +43,10 @@ struct MobbinNavigationBar: View {
                     .padding(.leading, 20)
                     .padding(.top, 20)
                     .transition(.opacity.animation(.easeInOut))
+                    .opacity(viewModel.exntend ? 0 : 1)
                 }
             }
-            .padding(.top, viewModel.stage == .normal ? 80 : 58)
+            .padding(.top, viewModel.stage == .normal ? 70 : 58)
             .overlay {
                 Color.clear
                     .measureSize { size in

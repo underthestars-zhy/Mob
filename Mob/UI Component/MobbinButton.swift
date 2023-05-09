@@ -28,6 +28,9 @@ struct MobbinButton<DefaultContent, HoverContent>: View where DefaultContent: Vi
                 defaultView
             }
         }
+        .onTouchDownGesture {
+            hover = false
+        }
         .simultaneousGesture(DragGesture(minimumDistance: 0)
             .onChanged { _ in
                 hover = true
@@ -37,8 +40,5 @@ struct MobbinButton<DefaultContent, HoverContent>: View where DefaultContent: Vi
                 action()
             }
         )
-        .onTouchDownGesture {
-            hover = false
-        }
     }
 }

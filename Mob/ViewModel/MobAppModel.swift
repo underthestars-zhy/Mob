@@ -27,6 +27,7 @@ class MobAppModel: ObservableObject {
                 let res = try await MobbinManager.shared.retrieve()
                 logined = res
             } catch {
+                logined = false
                 print(error)
             }
         }

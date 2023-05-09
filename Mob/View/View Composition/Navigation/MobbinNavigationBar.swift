@@ -24,21 +24,25 @@ struct MobbinNavigationBar: View {
                         .opacity(viewModel.exntend ? 0 : 1)
                 }
                 .padding(.horizontal, 30)
+                .padding(.bottom, viewModel.stage == .minimal ? 20 : 0)
                 
 
-                ScrollView(.horizontal, showsIndicators: false) {
-                    HStack(spacing: 10) {
-                        MobbinSectionButton(section: .apps, currentSection: $viewModel.currentSection)
+                if viewModel.stage != .minimal {
+                    ScrollView(.horizontal, showsIndicators: false) {
+                        HStack(spacing: 10) {
+                            MobbinSectionButton(section: .apps, currentSection: $viewModel.currentSection)
 
-                        MobbinSectionButton(section: .screens, currentSection: $viewModel.currentSection)
+                            MobbinSectionButton(section: .screens, currentSection: $viewModel.currentSection)
 
-                        MobbinSectionButton(section: .flows, currentSection: $viewModel.currentSection)
+                            MobbinSectionButton(section: .flows, currentSection: $viewModel.currentSection)
 
-                        Spacer()
+                            Spacer()
+                        }
                     }
+                    .padding(.leading, 20)
+                    .padding(.top, 20)
+                    .transition(.opacity.animation(.easeInOut))
                 }
-                .padding(.leading, 20)
-                .padding(.top, 20)
             }
             .padding(.top, viewModel.stage == .normal ? 80 : 58)
             .overlay {
@@ -49,6 +53,13 @@ struct MobbinNavigationBar: View {
                         }
                     }
             }
+            .background(Group {
+                if viewModel.stage == .minimal {
+                    Color.white.opacity(0.8).background(.ultraThinMaterial)
+                } else {
+                    Color.clear
+                }
+            })
 
             Spacer()
         }
@@ -62,3 +73,4 @@ struct MobbinNavigationBar_Previews: PreviewProvider {
             .edgesIgnoringSafeArea(.all)
     }
 }
+

@@ -34,9 +34,18 @@ struct MobbinNavigationView<Content: View>: View {
                 }
                 .onChange(of: scrollValue) { value in
                     withAnimation(.easeInOut) {
-                        if value.y <= -10 {
-                            viewModel.stage = .smallHead
-                        } else if value.y >= -30 {
+                        if value.y <= 0 {
+                            switch abs(value.y) {
+                            case 60...:
+                                viewModel.stage = .minimal
+                            case 20..<60:
+                                viewModel.stage = .smallHead
+                            case 0..<20:
+                                viewModel.stage = .normal
+                            default:
+                                viewModel.stage = .normal
+                            }
+                        } else {
                             viewModel.stage = .normal
                         }
                     }

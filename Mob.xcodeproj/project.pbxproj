@@ -15,6 +15,19 @@
 		903946462A06823F004FF650 /* MobbinScreenButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 903946452A06823F004FF650 /* MobbinScreenButton.swift */; };
 		903946482A0682A7004FF650 /* MobbinStatusButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 903946472A0682A7004FF650 /* MobbinStatusButton.swift */; };
 		9039464A2A068467004FF650 /* CircleProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 903946492A068467004FF650 /* CircleProgressView.swift */; };
+		908E67012A07CD3A005C5BC8 /* MobbinPlatformSwitcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 908E67002A07CD3A005C5BC8 /* MobbinPlatformSwitcher.swift */; };
+		908E67042A07D347005C5BC8 /* Platform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 908E67032A07D347005C5BC8 /* Platform.swift */; };
+		908E67072A08DC03005C5BC8 /* MobbinNavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 908E67062A08DC03005C5BC8 /* MobbinNavigationView.swift */; };
+		908E670A2A08F4FA005C5BC8 /* MobbinNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 908E67092A08F4FA005C5BC8 /* MobbinNavigationBar.swift */; };
+		908E670C2A08F5C0005C5BC8 /* NavigationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 908E670B2A08F5C0005C5BC8 /* NavigationViewModel.swift */; };
+		908E670E2A08F6D4005C5BC8 /* MobbinAvatarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 908E670D2A08F6D3005C5BC8 /* MobbinAvatarView.swift */; };
+		908E67112A08F951005C5BC8 /* SizeInRuntime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 908E67102A08F951005C5BC8 /* SizeInRuntime.swift */; };
+		908E67132A08FBEE005C5BC8 /* Section.swift in Sources */ = {isa = PBXBuildFile; fileRef = 908E67122A08FBEE005C5BC8 /* Section.swift */; };
+		908E67152A094185005C5BC8 /* ScrollOffset.swift in Sources */ = {isa = PBXBuildFile; fileRef = 908E67142A094185005C5BC8 /* ScrollOffset.swift */; };
+		908E67172A094551005C5BC8 /* MobbinSectionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 908E67162A094551005C5BC8 /* MobbinSectionButton.swift */; };
+		908E67192A094945005C5BC8 /* MobbinNavSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 908E67182A094945005C5BC8 /* MobbinNavSectionView.swift */; };
+		908E67382A0A0805005C5BC8 /* KeyboardBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 908E67372A0A0805005C5BC8 /* KeyboardBackground.swift */; };
+		908E673A2A0A0929005C5BC8 /* TouncDown.swift in Sources */ = {isa = PBXBuildFile; fileRef = 908E67392A0A0929005C5BC8 /* TouncDown.swift */; };
 		90E85BB229FF878800E69134 /* MobbinAPI in Frameworks */ = {isa = PBXBuildFile; productRef = 90E85BB129FF878800E69134 /* MobbinAPI */; };
 		90E85BB729FF88C500E69134 /* MobbinManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90E85BB629FF88C500E69134 /* MobbinManager.swift */; };
 		90E85BB929FFF80800E69134 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90E85BB829FFF80800E69134 /* LoginView.swift */; };
@@ -35,6 +48,19 @@
 		903946452A06823F004FF650 /* MobbinScreenButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobbinScreenButton.swift; sourceTree = "<group>"; };
 		903946472A0682A7004FF650 /* MobbinStatusButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobbinStatusButton.swift; sourceTree = "<group>"; };
 		903946492A068467004FF650 /* CircleProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleProgressView.swift; sourceTree = "<group>"; };
+		908E67002A07CD3A005C5BC8 /* MobbinPlatformSwitcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobbinPlatformSwitcher.swift; sourceTree = "<group>"; };
+		908E67032A07D347005C5BC8 /* Platform.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Platform.swift; sourceTree = "<group>"; };
+		908E67062A08DC03005C5BC8 /* MobbinNavigationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobbinNavigationView.swift; sourceTree = "<group>"; };
+		908E67092A08F4FA005C5BC8 /* MobbinNavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobbinNavigationBar.swift; sourceTree = "<group>"; };
+		908E670B2A08F5C0005C5BC8 /* NavigationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationViewModel.swift; sourceTree = "<group>"; };
+		908E670D2A08F6D3005C5BC8 /* MobbinAvatarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobbinAvatarView.swift; sourceTree = "<group>"; };
+		908E67102A08F951005C5BC8 /* SizeInRuntime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SizeInRuntime.swift; sourceTree = "<group>"; };
+		908E67122A08FBEE005C5BC8 /* Section.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Section.swift; sourceTree = "<group>"; };
+		908E67142A094185005C5BC8 /* ScrollOffset.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollOffset.swift; sourceTree = "<group>"; };
+		908E67162A094551005C5BC8 /* MobbinSectionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobbinSectionButton.swift; sourceTree = "<group>"; };
+		908E67182A094945005C5BC8 /* MobbinNavSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobbinNavSectionView.swift; sourceTree = "<group>"; };
+		908E67372A0A0805005C5BC8 /* KeyboardBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardBackground.swift; sourceTree = "<group>"; };
+		908E67392A0A0929005C5BC8 /* TouncDown.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TouncDown.swift; sourceTree = "<group>"; };
 		90E85BAE29FF614200E69134 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		90E85BB629FF88C500E69134 /* MobbinManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobbinManager.swift; sourceTree = "<group>"; };
 		90E85BB829FFF80800E69134 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
@@ -64,6 +90,7 @@
 			children = (
 				9039463B2A01222B004FF650 /* LoginViewModel.swift */,
 				903946402A0542FE004FF650 /* MobAppModel.swift */,
+				908E670B2A08F5C0005C5BC8 /* NavigationViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -76,9 +103,50 @@
 			path = Publishers;
 			sourceTree = "<group>";
 		};
+		908E67022A07D334005C5BC8 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				908E67032A07D347005C5BC8 /* Platform.swift */,
+				908E67122A08FBEE005C5BC8 /* Section.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		908E67052A08DBEF005C5BC8 /* View Composition */ = {
+			isa = PBXGroup;
+			children = (
+				908E67082A08F4EB005C5BC8 /* Navigation */,
+			);
+			path = "View Composition";
+			sourceTree = "<group>";
+		};
+		908E67082A08F4EB005C5BC8 /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				908E67002A07CD3A005C5BC8 /* MobbinPlatformSwitcher.swift */,
+				908E67062A08DC03005C5BC8 /* MobbinNavigationView.swift */,
+				908E67092A08F4FA005C5BC8 /* MobbinNavigationBar.swift */,
+				908E670D2A08F6D3005C5BC8 /* MobbinAvatarView.swift */,
+				908E67182A094945005C5BC8 /* MobbinNavSectionView.swift */,
+			);
+			path = Navigation;
+			sourceTree = "<group>";
+		};
+		908E670F2A08F944005C5BC8 /* View Helper */ = {
+			isa = PBXGroup;
+			children = (
+				908E67102A08F951005C5BC8 /* SizeInRuntime.swift */,
+				908E67142A094185005C5BC8 /* ScrollOffset.swift */,
+				908E67392A0A0929005C5BC8 /* TouncDown.swift */,
+			);
+			path = "View Helper";
+			sourceTree = "<group>";
+		};
 		90E85BAF29FF650600E69134 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				908E67052A08DBEF005C5BC8 /* View Composition */,
+				90FBAAAF29FD5F0E008D7F4F /* ContentView.swift */,
 				90E85BB829FFF80800E69134 /* LoginView.swift */,
 			);
 			path = View;
@@ -95,12 +163,14 @@
 		90E85BBA2A0002A000E69134 /* UI Component */ = {
 			isa = PBXGroup;
 			children = (
+				908E67372A0A0805005C5BC8 /* KeyboardBackground.swift */,
 				90E85BBB2A0002DA00E69134 /* MobbinTextField.swift */,
 				903946362A00BDEF004FF650 /* MobbinTextButton.swift */,
 				903946382A00DB97004FF650 /* MobbinButton.swift */,
 				903946452A06823F004FF650 /* MobbinScreenButton.swift */,
 				903946472A0682A7004FF650 /* MobbinStatusButton.swift */,
 				903946492A068467004FF650 /* CircleProgressView.swift */,
+				908E67162A094551005C5BC8 /* MobbinSectionButton.swift */,
 			);
 			path = "UI Component";
 			sourceTree = "<group>";
@@ -124,6 +194,8 @@
 		90FBAAAC29FD5F0E008D7F4F /* Mob */ = {
 			isa = PBXGroup;
 			children = (
+				908E670F2A08F944005C5BC8 /* View Helper */,
+				908E67022A07D334005C5BC8 /* Model */,
 				903946422A054A29004FF650 /* Publishers */,
 				9039463A2A012112004FF650 /* ViewModel */,
 				90E85BBA2A0002A000E69134 /* UI Component */,
@@ -131,7 +203,6 @@
 				90E85BAF29FF650600E69134 /* View */,
 				90E85BAE29FF614200E69134 /* Info.plist */,
 				90FBAAAD29FD5F0E008D7F4F /* MobApp.swift */,
-				90FBAAAF29FD5F0E008D7F4F /* ContentView.swift */,
 				90FBAAB129FD5F0F008D7F4F /* Assets.xcassets */,
 				90FBAAB329FD5F0F008D7F4F /* Preview Content */,
 			);
@@ -224,19 +295,32 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				908E67112A08F951005C5BC8 /* SizeInRuntime.swift in Sources */,
+				908E670C2A08F5C0005C5BC8 /* NavigationViewModel.swift in Sources */,
+				908E67152A094185005C5BC8 /* ScrollOffset.swift in Sources */,
+				908E67172A094551005C5BC8 /* MobbinSectionButton.swift in Sources */,
+				908E67042A07D347005C5BC8 /* Platform.swift in Sources */,
+				908E67132A08FBEE005C5BC8 /* Section.swift in Sources */,
 				903946392A00DB97004FF650 /* MobbinButton.swift in Sources */,
 				903946372A00BDEF004FF650 /* MobbinTextButton.swift in Sources */,
+				908E670A2A08F4FA005C5BC8 /* MobbinNavigationBar.swift in Sources */,
+				908E67192A094945005C5BC8 /* MobbinNavSectionView.swift in Sources */,
 				903946462A06823F004FF650 /* MobbinScreenButton.swift in Sources */,
 				90E85BB729FF88C500E69134 /* MobbinManager.swift in Sources */,
 				9039464A2A068467004FF650 /* CircleProgressView.swift in Sources */,
 				90FBAAB029FD5F0E008D7F4F /* ContentView.swift in Sources */,
+				908E67072A08DC03005C5BC8 /* MobbinNavigationView.swift in Sources */,
 				903946412A0542FE004FF650 /* MobAppModel.swift in Sources */,
 				903946482A0682A7004FF650 /* MobbinStatusButton.swift in Sources */,
+				908E670E2A08F6D4005C5BC8 /* MobbinAvatarView.swift in Sources */,
 				90E85BB929FFF80800E69134 /* LoginView.swift in Sources */,
+				908E673A2A0A0929005C5BC8 /* TouncDown.swift in Sources */,
 				903946442A054A3F004FF650 /* LoginPublisher.swift in Sources */,
+				908E67012A07CD3A005C5BC8 /* MobbinPlatformSwitcher.swift in Sources */,
 				90E85BBC2A0002DA00E69134 /* MobbinTextField.swift in Sources */,
 				90FBAAAE29FD5F0E008D7F4F /* MobApp.swift in Sources */,
 				9039463C2A01222B004FF650 /* LoginViewModel.swift in Sources */,
+				908E67382A0A0805005C5BC8 /* KeyboardBackground.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

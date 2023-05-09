@@ -37,5 +37,8 @@ struct MobbinButton<DefaultContent, HoverContent>: View where DefaultContent: Vi
                 action()
             }
         )
+        .onTouchDownGesture {
+            hover = false
+        }
     }
 }

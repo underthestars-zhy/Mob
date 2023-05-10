@@ -20,13 +20,13 @@ class ImageCache {
     }
 
     func retrieve(key: String) -> Image? {
-        cache.first { kv in
+        cache.reversed().first { kv in
             kv.key == key
         }?.value
     }
 
     func clean() {
-        while cache.count > 24 * 4 {
+        while cache.count > 24 * 2 {
             cache.removeFirst()
         }
     }

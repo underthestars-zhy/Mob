@@ -38,6 +38,7 @@
 		90B9704E2A0B76F900BE7DAF /* ScrollDetector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90B9704D2A0B76F900BE7DAF /* ScrollDetector.swift */; };
 		90B970512A0B796600BE7DAF /* Introspect in Frameworks */ = {isa = PBXBuildFile; productRef = 90B970502A0B796600BE7DAF /* Introspect */; };
 		90B970542A0B79B500BE7DAF /* MobbinScrollViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90B970532A0B79B500BE7DAF /* MobbinScrollViewDelegate.swift */; };
+		90B970572A0BC98500BE7DAF /* ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90B970562A0BC98500BE7DAF /* ImageCache.swift */; };
 		90E85BB229FF878800E69134 /* MobbinAPI in Frameworks */ = {isa = PBXBuildFile; productRef = 90E85BB129FF878800E69134 /* MobbinAPI */; };
 		90E85BB729FF88C500E69134 /* MobbinManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90E85BB629FF88C500E69134 /* MobbinManager.swift */; };
 		90E85BB929FFF80800E69134 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90E85BB829FFF80800E69134 /* LoginView.swift */; };
@@ -79,6 +80,7 @@
 		90B9704B2A0B732A00BE7DAF /* MobbinApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobbinApp.swift; sourceTree = "<group>"; };
 		90B9704D2A0B76F900BE7DAF /* ScrollDetector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollDetector.swift; sourceTree = "<group>"; };
 		90B970532A0B79B500BE7DAF /* MobbinScrollViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobbinScrollViewDelegate.swift; sourceTree = "<group>"; };
+		90B970562A0BC98500BE7DAF /* ImageCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCache.swift; sourceTree = "<group>"; };
 		90E85BAE29FF614200E69134 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		90E85BB629FF88C500E69134 /* MobbinManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobbinManager.swift; sourceTree = "<group>"; };
 		90E85BB829FFF80800E69134 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
@@ -191,6 +193,14 @@
 			path = Delegate;
 			sourceTree = "<group>";
 		};
+		90B970552A0BC97000BE7DAF /* Cache */ = {
+			isa = PBXGroup;
+			children = (
+				90B970562A0BC98500BE7DAF /* ImageCache.swift */,
+			);
+			path = Cache;
+			sourceTree = "<group>";
+		};
 		90E85BAF29FF650600E69134 /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -244,6 +254,7 @@
 		90FBAAAC29FD5F0E008D7F4F /* Mob */ = {
 			isa = PBXGroup;
 			children = (
+				90B970552A0BC97000BE7DAF /* Cache */,
 				90B970522A0B79A700BE7DAF /* Delegate */,
 				90B9704A2A0B732100BE7DAF /* TypeAlias */,
 				908E670F2A08F944005C5BC8 /* View Helper */,
@@ -356,6 +367,7 @@
 				908E67152A094185005C5BC8 /* ScrollOffset.swift in Sources */,
 				908E67172A094551005C5BC8 /* MobbinSectionButton.swift in Sources */,
 				908E67042A07D347005C5BC8 /* Platform.swift in Sources */,
+				90B970572A0BC98500BE7DAF /* ImageCache.swift in Sources */,
 				908E67132A08FBEE005C5BC8 /* Section.swift in Sources */,
 				903946392A00DB97004FF650 /* MobbinButton.swift in Sources */,
 				90B970542A0B79B500BE7DAF /* MobbinScrollViewDelegate.swift in Sources */,

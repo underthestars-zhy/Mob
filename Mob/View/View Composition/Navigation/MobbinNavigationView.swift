@@ -25,13 +25,14 @@ struct MobbinNavigationView<Content: View>: View {
         NavigationStack {
             ScrollView(showsIndicators: false) {
                 VStack(spacing: 0) {
-                    Color.clear
+                    VStack {}
                         .frame(height: barHeight)
 
                     VStack(spacing: 0) {
                         content(Indicator(platform: viewModel.platform, section: viewModel.currentSection))
                     }
                     .padding(.top, 30)
+                    .padding(.bottom, 30)
                     .padding(.horizontal, 20)
                 }
                 .measureScroll { scroll in

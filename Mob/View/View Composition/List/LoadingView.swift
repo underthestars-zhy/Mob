@@ -10,13 +10,11 @@ import SwiftUI
 struct LoadingView: View {
     var body: some View {
         VStack {
-            Spacer()
-
             CircleProgressView(lineWidth: 8)
                 .frame(width: 40, height: 40)
-
-            Spacer()
+                .padding(.top, 50)
         }
+        .frame(maxHeight: .infinity)
     }
 }
 

@@ -8,3 +8,5 @@
 import MobbinAPI
 
 typealias MobbinApp = App
+
+extension MobbinApp: Identifiable {}

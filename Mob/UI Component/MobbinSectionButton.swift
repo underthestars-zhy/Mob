@@ -82,6 +82,7 @@ struct MobbinSectionButton: View {
                 currentSection = section
             }
         }
+        .animation(.easeInOut, value: value)
         .task {
             do {
                 let mobbinAPi = MobbinManager.shared.mobbinAPI

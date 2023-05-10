@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct MobbinPlatformSwitcher: View {
+    @EnvironmentObject var viewModel: NavigationViewModel
+
     let largeTitle: Bool
 
     @Binding var platform: Platform
@@ -21,7 +23,7 @@ struct MobbinPlatformSwitcher: View {
             }
         } label: {
             HStack(spacing: 0) {
-                Text(extend ? "Platforms" : platform.displayText)
+                Text(extend ? (viewModel.stage == .normal ? "Platforms" : viewModel.platform.displayText) : platform.displayText)
                     .font(.system(size: largeTitle ? 42 : 26, weight: largeTitle ? .bold : .semibold))
                     .foregroundColor(.black)
 

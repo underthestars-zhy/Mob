@@ -21,13 +21,13 @@ struct MobbinPlatformPicker: View {
                 viewModel.exntend = false
             }
         } label: {
-            HStack(spacing: 10) {
+            HStack(spacing: largeTitle ? 10 : 8) {
                 Text(platform.displayText)
-                    .font(.system(size: 36, weight: .semibold))
+                    .font(.system(size: largeTitle ? 36 : 24, weight: largeTitle ? .semibold : .medium))
                     .foregroundColor(.black)
 
                 Image(systemName: "arrow.right")
-                    .font(.system(size: 26, weight: .medium))
+                    .font(.system(size: largeTitle ? 26 : 21, weight: largeTitle ? .medium : .regular))
                     .foregroundColor(.black)
             }
         }

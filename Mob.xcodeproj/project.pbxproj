@@ -25,7 +25,6 @@
 		908E67132A08FBEE005C5BC8 /* Section.swift in Sources */ = {isa = PBXBuildFile; fileRef = 908E67122A08FBEE005C5BC8 /* Section.swift */; };
 		908E67152A094185005C5BC8 /* ScrollOffset.swift in Sources */ = {isa = PBXBuildFile; fileRef = 908E67142A094185005C5BC8 /* ScrollOffset.swift */; };
 		908E67172A094551005C5BC8 /* MobbinSectionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 908E67162A094551005C5BC8 /* MobbinSectionButton.swift */; };
-		908E67192A094945005C5BC8 /* MobbinNavSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 908E67182A094945005C5BC8 /* MobbinNavSectionView.swift */; };
 		908E67382A0A0805005C5BC8 /* KeyboardBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 908E67372A0A0805005C5BC8 /* KeyboardBackground.swift */; };
 		908E673A2A0A0929005C5BC8 /* TouncDown.swift in Sources */ = {isa = PBXBuildFile; fileRef = 908E67392A0A0929005C5BC8 /* TouncDown.swift */; };
 		908E673C2A0A14AB005C5BC8 /* MobbinPlatformPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 908E673B2A0A14AB005C5BC8 /* MobbinPlatformPicker.swift */; };
@@ -69,7 +68,6 @@
 		908E67122A08FBEE005C5BC8 /* Section.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Section.swift; sourceTree = "<group>"; };
 		908E67142A094185005C5BC8 /* ScrollOffset.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollOffset.swift; sourceTree = "<group>"; };
 		908E67162A094551005C5BC8 /* MobbinSectionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobbinSectionButton.swift; sourceTree = "<group>"; };
-		908E67182A094945005C5BC8 /* MobbinNavSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobbinNavSectionView.swift; sourceTree = "<group>"; };
 		908E67372A0A0805005C5BC8 /* KeyboardBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardBackground.swift; sourceTree = "<group>"; };
 		908E67392A0A0929005C5BC8 /* TouncDown.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TouncDown.swift; sourceTree = "<group>"; };
 		908E673B2A0A14AB005C5BC8 /* MobbinPlatformPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobbinPlatformPicker.swift; sourceTree = "<group>"; };
@@ -152,7 +150,6 @@
 				908E67062A08DC03005C5BC8 /* MobbinNavigationView.swift */,
 				908E67092A08F4FA005C5BC8 /* MobbinNavigationBar.swift */,
 				908E670D2A08F6D3005C5BC8 /* MobbinAvatarView.swift */,
-				908E67182A094945005C5BC8 /* MobbinNavSectionView.swift */,
 			);
 			path = Navigation;
 			sourceTree = "<group>";
@@ -364,7 +361,6 @@
 				90B970542A0B79B500BE7DAF /* MobbinScrollViewDelegate.swift in Sources */,
 				903946372A00BDEF004FF650 /* MobbinTextButton.swift in Sources */,
 				908E670A2A08F4FA005C5BC8 /* MobbinNavigationBar.swift in Sources */,
-				908E67192A094945005C5BC8 /* MobbinNavSectionView.swift in Sources */,
 				903946462A06823F004FF650 /* MobbinScreenButton.swift in Sources */,
 				90E85BB729FF88C500E69134 /* MobbinManager.swift in Sources */,
 				9039464A2A068467004FF650 /* CircleProgressView.swift in Sources */,

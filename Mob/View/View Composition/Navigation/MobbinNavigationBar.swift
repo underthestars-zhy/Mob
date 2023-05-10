@@ -25,9 +25,31 @@ struct MobbinNavigationBar: View {
                         .transition(.opacity.animation(.easeInOut))
                         .opacity((viewModel.exntend && viewModel.stage == .normal) ? 0 : 1)
                 }
-                .padding(.horizontal, 30)
+                .padding(.horizontal, viewModel.stage == .normal ? 30 : 35)
                 .padding(.bottom, viewModel.stage == .minimal ? 20 : 0)
-                
+
+                if viewModel.stage != .normal && viewModel.exntend {
+                    HStack {
+                        VStack(alignment: .leading, spacing: 10) {
+                            if viewModel.platform != Platform.ios {
+                                MobbinPlatformPicker(largeTitle: false, platform: .ios, currentPlatform: $viewModel.platform)
+                            }
+
+                            if viewModel.platform != Platform.android {
+                                MobbinPlatformPicker(largeTitle: false, platform: .android, currentPlatform: $viewModel.platform)
+                            }
+
+                            if viewModel.platform != Platform.web {
+                                MobbinPlatformPicker(largeTitle: false, platform: .web, currentPlatform: $viewModel.platform)
+                            }
+                        }
+
+                        Spacer()
+                    }
+                    .padding(.top, viewModel.stage == .smallHead ? 20 : 0)
+                    .padding(.horizontal, 35)
+                    .padding(.bottom, 10)
+                }
 
                 if viewModel.stage != .minimal || viewModel.exntend {
                     ScrollView(.horizontal, showsIndicators: false) {

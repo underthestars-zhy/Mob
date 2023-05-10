@@ -55,6 +55,7 @@ struct MobbinNavigationBar: View {
                     ScrollView(.horizontal, showsIndicators: false) {
                         HStack(spacing: 10) {
                             MobbinSectionButton(section: .apps, currentSection: $viewModel.currentSection)
+                                .padding(.leading, 20)
 
                             MobbinSectionButton(section: .screens, currentSection: $viewModel.currentSection)
 
@@ -63,7 +64,6 @@ struct MobbinNavigationBar: View {
                             Spacer()
                         }
                     }
-                    .padding(.leading, 20)
                     .padding(.top, 20)
                     .transition(.opacity.animation(.easeInOut))
                     .opacity((viewModel.exntend && viewModel.stage == .normal) ? 0 : 1)

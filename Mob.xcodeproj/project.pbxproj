@@ -36,6 +36,9 @@
 		90B970472A0B71FE00BE7DAF /* iOSListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90B970462A0B71FE00BE7DAF /* iOSListView.swift */; };
 		90B970492A0B727A00BE7DAF /* ListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90B970482A0B727A00BE7DAF /* ListViewModel.swift */; };
 		90B9704C2A0B732A00BE7DAF /* MobbinApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90B9704B2A0B732A00BE7DAF /* MobbinApp.swift */; };
+		90B9704E2A0B76F900BE7DAF /* ScrollDetector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90B9704D2A0B76F900BE7DAF /* ScrollDetector.swift */; };
+		90B970512A0B796600BE7DAF /* Introspect in Frameworks */ = {isa = PBXBuildFile; productRef = 90B970502A0B796600BE7DAF /* Introspect */; };
+		90B970542A0B79B500BE7DAF /* MobbinScrollViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90B970532A0B79B500BE7DAF /* MobbinScrollViewDelegate.swift */; };
 		90E85BB229FF878800E69134 /* MobbinAPI in Frameworks */ = {isa = PBXBuildFile; productRef = 90E85BB129FF878800E69134 /* MobbinAPI */; };
 		90E85BB729FF88C500E69134 /* MobbinManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90E85BB629FF88C500E69134 /* MobbinManager.swift */; };
 		90E85BB929FFF80800E69134 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90E85BB829FFF80800E69134 /* LoginView.swift */; };
@@ -76,6 +79,8 @@
 		90B970462A0B71FE00BE7DAF /* iOSListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOSListView.swift; sourceTree = "<group>"; };
 		90B970482A0B727A00BE7DAF /* ListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewModel.swift; sourceTree = "<group>"; };
 		90B9704B2A0B732A00BE7DAF /* MobbinApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobbinApp.swift; sourceTree = "<group>"; };
+		90B9704D2A0B76F900BE7DAF /* ScrollDetector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollDetector.swift; sourceTree = "<group>"; };
+		90B970532A0B79B500BE7DAF /* MobbinScrollViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobbinScrollViewDelegate.swift; sourceTree = "<group>"; };
 		90E85BAE29FF614200E69134 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		90E85BB629FF88C500E69134 /* MobbinManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobbinManager.swift; sourceTree = "<group>"; };
 		90E85BB829FFF80800E69134 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
@@ -93,6 +98,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				90E85BB229FF878800E69134 /* MobbinAPI in Frameworks */,
+				90B970512A0B796600BE7DAF /* Introspect in Frameworks */,
 				90B9703E2A0B4E8300BE7DAF /* VisualEffectView in Frameworks */,
 				90E85BBF2A00139100E69134 /* SwiftUIX in Frameworks */,
 			);
@@ -157,6 +163,7 @@
 				908E67102A08F951005C5BC8 /* SizeInRuntime.swift */,
 				908E67142A094185005C5BC8 /* ScrollOffset.swift */,
 				908E67392A0A0929005C5BC8 /* TouncDown.swift */,
+				90B9704D2A0B76F900BE7DAF /* ScrollDetector.swift */,
 			);
 			path = "View Helper";
 			sourceTree = "<group>";
@@ -177,6 +184,14 @@
 				90B9704B2A0B732A00BE7DAF /* MobbinApp.swift */,
 			);
 			path = TypeAlias;
+			sourceTree = "<group>";
+		};
+		90B970522A0B79A700BE7DAF /* Delegate */ = {
+			isa = PBXGroup;
+			children = (
+				90B970532A0B79B500BE7DAF /* MobbinScrollViewDelegate.swift */,
+			);
+			path = Delegate;
 			sourceTree = "<group>";
 		};
 		90E85BAF29FF650600E69134 /* View */ = {
@@ -232,6 +247,7 @@
 		90FBAAAC29FD5F0E008D7F4F /* Mob */ = {
 			isa = PBXGroup;
 			children = (
+				90B970522A0B79A700BE7DAF /* Delegate */,
 				90B9704A2A0B732100BE7DAF /* TypeAlias */,
 				908E670F2A08F944005C5BC8 /* View Helper */,
 				908E67022A07D334005C5BC8 /* Model */,
@@ -276,6 +292,7 @@
 				90E85BB129FF878800E69134 /* MobbinAPI */,
 				90E85BBE2A00139100E69134 /* SwiftUIX */,
 				90B9703D2A0B4E8300BE7DAF /* VisualEffectView */,
+				90B970502A0B796600BE7DAF /* Introspect */,
 			);
 			productName = Mob;
 			productReference = 90FBAAAA29FD5F0E008D7F4F /* Mob.app */;
@@ -309,6 +326,7 @@
 				90E85BB029FF878800E69134 /* XCRemoteSwiftPackageReference "MobbinAPI" */,
 				90E85BBD2A00139100E69134 /* XCRemoteSwiftPackageReference "SwiftUIX" */,
 				90B9703C2A0B4E8300BE7DAF /* XCRemoteSwiftPackageReference "VisualEffectView" */,
+				90B9704F2A0B796600BE7DAF /* XCRemoteSwiftPackageReference "SwiftUI-Introspect" */,
 			);
 			productRefGroup = 90FBAAAB29FD5F0E008D7F4F /* Products */;
 			projectDirPath = "";
@@ -343,6 +361,7 @@
 				908E67042A07D347005C5BC8 /* Platform.swift in Sources */,
 				908E67132A08FBEE005C5BC8 /* Section.swift in Sources */,
 				903946392A00DB97004FF650 /* MobbinButton.swift in Sources */,
+				90B970542A0B79B500BE7DAF /* MobbinScrollViewDelegate.swift in Sources */,
 				903946372A00BDEF004FF650 /* MobbinTextButton.swift in Sources */,
 				908E670A2A08F4FA005C5BC8 /* MobbinNavigationBar.swift in Sources */,
 				908E67192A094945005C5BC8 /* MobbinNavSectionView.swift in Sources */,
@@ -352,6 +371,7 @@
 				90B970452A0B713F00BE7DAF /* Indicator.swift in Sources */,
 				90FBAAB029FD5F0E008D7F4F /* ContentView.swift in Sources */,
 				908E67072A08DC03005C5BC8 /* MobbinNavigationView.swift in Sources */,
+				90B9704E2A0B76F900BE7DAF /* ScrollDetector.swift in Sources */,
 				903946412A0542FE004FF650 /* MobAppModel.swift in Sources */,
 				903946482A0682A7004FF650 /* MobbinStatusButton.swift in Sources */,
 				908E670E2A08F6D4005C5BC8 /* MobbinAvatarView.swift in Sources */,
@@ -587,6 +607,14 @@
 				kind = branch;
 			};
 		};
+		90B9704F2A0B796600BE7DAF /* XCRemoteSwiftPackageReference "SwiftUI-Introspect" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/siteline/SwiftUI-Introspect";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.2.3;
+			};
+		};
 		90E85BB029FF878800E69134 /* XCRemoteSwiftPackageReference "MobbinAPI" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/underthestars-zhy/MobbinAPI";
@@ -610,6 +638,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 90B9703C2A0B4E8300BE7DAF /* XCRemoteSwiftPackageReference "VisualEffectView" */;
 			productName = VisualEffectView;
+		};
+		90B970502A0B796600BE7DAF /* Introspect */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 90B9704F2A0B796600BE7DAF /* XCRemoteSwiftPackageReference "SwiftUI-Introspect" */;
+			productName = Introspect;
 		};
 		90E85BB129FF878800E69134 /* MobbinAPI */ = {
 			isa = XCSwiftPackageProductDependency;

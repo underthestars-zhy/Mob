@@ -10,14 +10,21 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         MobbinNavigationView { indicator in
-            switch indicator.platform {
-            case .ios:
-                iOSListView(indicator: indicator)
-            case .android:
-                EmptyView()
-            case .web:
-                EmptyView()
+            VStack {
+                ForEach(1..<80, id: \.self) { _ in
+                    Text("hi")
+                        .padding()
+                }
             }
+            .frame(maxWidth: .infinity)
+//            switch indicator.platform {
+//            case .ios:
+//                iOSListView(indicator: indicator)
+//            case .android:
+//                EmptyView()
+//            case .web:
+//                EmptyView()
+//            }
         }
         .edgesIgnoringSafeArea(.all)
     }

@@ -23,13 +23,13 @@ struct MobbinNavigationBar: View {
 
                     MobbinAvatarView()
                         .transition(.opacity.animation(.easeInOut))
-                        .opacity(viewModel.exntend ? 0 : 1)
+                        .opacity((viewModel.exntend && viewModel.stage == .normal) ? 0 : 1)
                 }
                 .padding(.horizontal, 30)
                 .padding(.bottom, viewModel.stage == .minimal ? 20 : 0)
                 
 
-                if viewModel.stage != .minimal {
+                if viewModel.stage != .minimal || viewModel.exntend {
                     ScrollView(.horizontal, showsIndicators: false) {
                         HStack(spacing: 10) {
                             MobbinSectionButton(section: .apps, currentSection: $viewModel.currentSection)
@@ -44,7 +44,7 @@ struct MobbinNavigationBar: View {
                     .padding(.leading, 20)
                     .padding(.top, 20)
                     .transition(.opacity.animation(.easeInOut))
-                    .opacity(viewModel.exntend ? 0 : 1)
+                    .opacity((viewModel.exntend && viewModel.stage == .normal) ? 0 : 1)
                 }
             }
             .padding(.top, viewModel.stage == .normal ? 70 : 58)

@@ -8,14 +8,18 @@
 import SwiftUI
 import SwiftUIX
 import VisualEffectView
+import Introspect
 
 struct MobbinNavigationView<Content: View>: View {
     @StateObject var viewModel = NavigationViewModel()
+    @StateObject var scrollViewDelegate = MobbinScrollViewDelegate()
 
     @ViewBuilder let content: (Indicator) -> Content
 
     @State var barHeight: CGFloat = .zero
     @State var scrollValue: CGPoint = .zero
+
+    @State private var isScrolling = false
 
     var body: some View {
         NavigationStack {
@@ -49,8 +53,18 @@ struct MobbinNavigationView<Content: View>: View {
                         } else {
                             viewModel.stage = .normal
                         }
+
+                        if viewModel.exntend && viewModel.stage != .normal && scrollViewDelegate.isScrolling {
+                            viewModel.exntend = false
+                        }
                     }
                 }
+                .onChange(of: isScrolling, perform: { value in
+                    print(value)
+                })
+            }
+            .introspectScrollView { uiScrollView in
+                uiScrollView.delegate = scrollViewDelegate
             }
             .coordinateSpace(name: "scroll")
             .navigationBarHidden(true)
@@ -76,8 +90,12 @@ struct MobbinNavigationView<Content: View>: View {
             }
             .animation(.easeInOut(duration: 2), value: viewModel.exntend)
             .frame(maxWidth: Screen.width, maxHeight: Screen.height)
-            .background(VisualEffect(colorTint: .white, colorTintAlpha: 0.8, blurRadius: 20))
-            .opacity(viewModel.exntend ? 1 : 0)
+            .background(VisualEffect(colorTint: .white, colorTintAlpha: 0.8, blurRadius: 20).onTapGesture {
+                withAnimation(.easeInOut) {
+                    viewModel.exntend = false
+                }
+            })
+            .opacity((viewModel.exntend && viewModel.stage == .normal) ? 1 : 0)
         }
         .overlay(MobbinNavigationBar(barHeight: $barHeight))
         .frame(maxWidth: .infinity)

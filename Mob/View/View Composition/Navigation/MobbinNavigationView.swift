@@ -14,7 +14,7 @@ struct MobbinNavigationView<Content: View>: View {
     @StateObject var viewModel = NavigationViewModel()
     @StateObject var scrollViewDelegate = MobbinScrollViewDelegate()
 
-    @ViewBuilder let content: (Indicator) -> Content
+    @ViewBuilder let content: () -> Content
 
     @State var barHeight: CGFloat = .zero
     @State var scrollValue: CGPoint = .zero
@@ -29,7 +29,7 @@ struct MobbinNavigationView<Content: View>: View {
                         .frame(height: barHeight)
 
                     VStack(spacing: 0) {
-                        content(Indicator(platform: viewModel.platform, section: viewModel.currentSection))
+                        content()
                     }
                     .padding(.top, 30)
                     .padding(.bottom, 30)
@@ -106,7 +106,7 @@ struct MobbinNavigationView<Content: View>: View {
 
 struct MobbinNavigationView_Previews: PreviewProvider {
     static var previews: some View {
-        MobbinNavigationView { indicator in
+        MobbinNavigationView {
             VStack {
                 ForEach(1..<50, id: \.self) { _ in
                     Text("hi")

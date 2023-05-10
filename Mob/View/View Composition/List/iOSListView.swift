@@ -8,23 +8,29 @@
 import SwiftUI
 
 struct iOSListView: View {
-    let indicator: Indicator
-
     @StateObject var viewModel = ListViewModel()
+
+    @ObservedObject var indicator: Indicator = Indicator.shared
     
     var body: some View {
-        if viewModel.apps.isEmpty {
-            LoadingView()
-                .onAppear {
-                    viewModel.fetchApps(indicator)
+        VStack {
+            if viewModel.apps.isEmpty {
+                LoadingView()
+            } else {
+                VStack(spacing: 30) {
+                    ForEach(viewModel.apps) { app in
+                        AppListItem(app: app)
+                    }
                 }
-        } else {
-            VStack(spacing: 30) {
-                ForEach(viewModel.apps) { app in
-                    AppListItem(app: app)
-                }
+                .padding(.horizontal, 20)
             }
-            .padding(.horizontal, 20)
         }
+        .onAppear {
+            viewModel.fetchApps()
+        }
+        .onChange(of: indicator.section) { _ in
+            viewModel.fetchApps()
+        }
+        .animation(nil, value: indicator.section)
     }
 }

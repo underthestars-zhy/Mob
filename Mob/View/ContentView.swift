@@ -8,11 +8,12 @@
 import SwiftUI
 
 struct ContentView: View {
+    @ObservedObject var indicator = Indicator.shared
     var body: some View {
-        MobbinNavigationView { indicator in
+        MobbinNavigationView {
             switch indicator.platform {
             case .ios:
-                iOSListView(indicator: indicator)
+                iOSListView()
             case .android:
                 EmptyView()
             case .web:

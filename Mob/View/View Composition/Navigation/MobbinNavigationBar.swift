@@ -65,7 +65,6 @@ struct MobbinNavigationBar: View {
                         }
                     }
                     .padding(.top, 20)
-                    .transition(.opacity.animation(.easeInOut))
                     .opacity((viewModel.exntend && viewModel.stage == .normal) ? 0 : 1)
                     .padding(.bottom, (viewModel.stage != .normal && viewModel.exntend) ? 20 : 0)
                 }

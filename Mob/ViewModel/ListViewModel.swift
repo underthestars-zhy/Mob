@@ -7,23 +7,28 @@
 
 import SwiftUI
 import MobbinAPI
+import Combine
 
 class ListViewModel: ObservableObject {
     @Published var apps: [MobbinApp] = []
 
-    func fetchApps(_ indicator: Indicator) {
-        switch indicator.platform {
+    func fetchApps() {
+        apps = []
+        
+        switch Indicator.shared.platform {
         case .ios:
-            fetchApps(platform: .ios, indicator)
+            fetchApps(platform: .ios)
         case .android:
-            fetchApps(platform: .android, indicator)
+            fetchApps(platform: .android)
         case .web:
-            fetchApps(platform: .web, indicator)
+            fetchApps(platform: .web)
         }
     }
 
-    func fetchApps(platform: Platform, _ indicator: Indicator) {
-        switch indicator.section {
+    func fetchApps(platform: Platform) {
+        print("loading \(Indicator.shared.platform) : \(Indicator.shared.section)")
+
+        switch Indicator.shared.section {
         case .apps:
             Task {
                 apps = try await MobbinManager.shared.mobbinAPI.queryNextPage(nil)

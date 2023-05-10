@@ -10,9 +10,28 @@ import Combine
 
 class NavigationViewModel: ObservableObject {
     @Published var platform: Platform = .ios
+
     @Published var exntend = false // Choose the platform
-    @Published var stage = Stage.normal
+    @Published var stage = Stage.normal 
     @Published var currentSection: Section = .apps
+
+    private var subscribers: [AnyCancellable] = []
+
+    init() {
+        $platform
+            .sink { newValue in
+                Indicator.shared.platform = newValue
+            }
+            .store(in: &subscribers)
+
+        $currentSection
+            .sink { newValue in
+                Indicator.shared.section = newValue
+            }
+            .store(in: &subscribers)
+        
+    }
+    
 
     enum Stage {
         case normal

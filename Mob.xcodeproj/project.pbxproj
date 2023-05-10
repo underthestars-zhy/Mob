@@ -119,6 +119,7 @@
 		903946422A054A29004FF650 /* Publishers */ = {
 			isa = PBXGroup;
 			children = (
+				90B970442A0B713F00BE7DAF /* Indicator.swift */,
 				903946432A054A3F004FF650 /* LoginPublisher.swift */,
 			);
 			path = Publishers;
@@ -129,7 +130,6 @@
 			children = (
 				908E67032A07D347005C5BC8 /* Platform.swift */,
 				908E67122A08FBEE005C5BC8 /* Section.swift */,
-				90B970442A0B713F00BE7DAF /* Indicator.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";

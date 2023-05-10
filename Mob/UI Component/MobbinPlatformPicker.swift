@@ -16,8 +16,9 @@ struct MobbinPlatformPicker: View {
 
     var body: some View {
         Button {
+            currentPlatform = platform
+
             withAnimation(.easeInOut) {
-                currentPlatform = platform
                 viewModel.exntend = false
             }
         } label: {

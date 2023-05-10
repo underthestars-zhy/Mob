@@ -12,5 +12,6 @@ class Indicator: ObservableObject {
 
     @Published var platform: Platform = .ios
     @Published var section: Section = .apps
+    @Published var onBottom: Int = 0
     
 }

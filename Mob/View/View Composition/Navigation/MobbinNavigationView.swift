@@ -15,11 +15,10 @@ struct MobbinNavigationView<Content: View>: View {
     @StateObject var scrollViewDelegate = MobbinScrollViewDelegate()
 
     @ViewBuilder let content: () -> Content
+    let onBottom: () -> ()
 
     @State var barHeight: CGFloat = .zero
     @State var scrollValue: CGPoint = .zero
-
-    @State private var isScrolling = false
 
     var body: some View {
         NavigationStack {
@@ -60,9 +59,6 @@ struct MobbinNavigationView<Content: View>: View {
                         }
                     }
                 }
-                .onChange(of: isScrolling, perform: { value in
-                    print(value)
-                })
             }
             .introspectScrollView { uiScrollView in
                 uiScrollView.delegate = scrollViewDelegate
@@ -70,6 +66,10 @@ struct MobbinNavigationView<Content: View>: View {
             .coordinateSpace(name: "scroll")
             .navigationBarHidden(true)
             .edgesIgnoringSafeArea(.all)
+            .onChange(of: scrollViewDelegate.onBottom) { value in
+                onBottom()
+                Indicator.shared.onBottom = value
+            }
         }
         .overlay {
             VStack(spacing: 0) {
@@ -113,6 +113,8 @@ struct MobbinNavigationView_Previews: PreviewProvider {
                 }
             }
             .frame(maxWidth: .infinity)
+        } onBottom: {
+
         }
         .edgesIgnoringSafeArea(.all)
     }

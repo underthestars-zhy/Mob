@@ -12,30 +12,39 @@ import Combine
 class ListViewModel: ObservableObject {
     @Published var apps: [MobbinApp] = []
 
+    var lastApp: MobbinApp? = nil
+    var loading = false
+
     func fetchApps() {
         apps = []
+        lastApp = nil
         
-        switch Indicator.shared.platform {
-        case .ios:
-            fetchApps(platform: .ios)
-        case .android:
-            fetchApps(platform: .android)
-        case .web:
-            fetchApps(platform: .web)
-        }
+        updateApps()
     }
 
-    func fetchApps(platform: Platform) {
+    func updateApps() {
+        guard !loading else { return }
+
         print("loading \(Indicator.shared.platform) : \(Indicator.shared.section)")
 
-        switch Indicator.shared.section {
-        case .apps:
-            Task {
-                apps = try await MobbinManager.shared.mobbinAPI.queryNextPage(nil)
+        switch Indicator.shared.platform {
+        case .ios:
+            switch Indicator.shared.section {
+            case .apps:
+                Task {
+                    loading = true
+                    apps += try await MobbinManager.shared.mobbinAPI.queryNextPage(lastApp)
+                    lastApp = apps.last
+                    loading = false
+                }
+            case .flows:
+                break
+            case .screens:
+                break
             }
-        case .screens:
+        case .android:
             break
-        case .flows:
+        case .web:
             break
         }
     }

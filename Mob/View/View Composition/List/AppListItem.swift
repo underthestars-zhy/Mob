@@ -53,6 +53,7 @@ struct AppListItem: View {
                             .resizable()
                             .scaledToFit()
                             .frame(width: calPreviewWidth())
+                            .draggable(image)
                     } placeholder: {
                         Color.white
                             .frame(width: calPreviewWidth(), height: calPreviewWidth() / 1125 * 2436)

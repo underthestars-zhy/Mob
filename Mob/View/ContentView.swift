@@ -9,16 +9,12 @@ import SwiftUI
 
 struct ContentView: View {
     @ObservedObject var indicator = Indicator.shared
+
     var body: some View {
         MobbinNavigationView {
-            switch indicator.platform {
-            case .ios:
-                iOSListView()
-            case .android:
-                EmptyView()
-            case .web:
-                EmptyView()
-            }
+            ListView()
+        } onBottom: {
+            print("on bottom")
         }
         .edgesIgnoringSafeArea(.all)
     }

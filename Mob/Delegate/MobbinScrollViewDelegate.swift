@@ -9,6 +9,7 @@ import UIKit
 
 class MobbinScrollViewDelegate: NSObject, UIScrollViewDelegate, ObservableObject {
     @Published var isScrolling = false
+    @Published var onBottom = 0
 
     func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
         isScrolling = true
@@ -20,5 +21,11 @@ class MobbinScrollViewDelegate: NSObject, UIScrollViewDelegate, ObservableObject
 
     func scrollViewDidEndScrolling(_ scrollView: UIScrollView) {
         isScrolling = false
+    }
+
+    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+        if (scrollView.contentOffset.y + 1) >= (scrollView.contentSize.height - scrollView.frame.size.height) {
+            onBottom += 1
+        }
     }
 }

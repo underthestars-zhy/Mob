@@ -32,7 +32,7 @@
 		90B970412A0B70A300BE7DAF /* AppListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90B970402A0B70A300BE7DAF /* AppListItem.swift */; };
 		90B970432A0B70B100BE7DAF /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90B970422A0B70B100BE7DAF /* LoadingView.swift */; };
 		90B970452A0B713F00BE7DAF /* Indicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90B970442A0B713F00BE7DAF /* Indicator.swift */; };
-		90B970472A0B71FE00BE7DAF /* iOSListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90B970462A0B71FE00BE7DAF /* iOSListView.swift */; };
+		90B970472A0B71FE00BE7DAF /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90B970462A0B71FE00BE7DAF /* ListView.swift */; };
 		90B970492A0B727A00BE7DAF /* ListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90B970482A0B727A00BE7DAF /* ListViewModel.swift */; };
 		90B9704C2A0B732A00BE7DAF /* MobbinApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90B9704B2A0B732A00BE7DAF /* MobbinApp.swift */; };
 		90B9704E2A0B76F900BE7DAF /* ScrollDetector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90B9704D2A0B76F900BE7DAF /* ScrollDetector.swift */; };
@@ -74,7 +74,7 @@
 		90B970402A0B70A300BE7DAF /* AppListItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppListItem.swift; sourceTree = "<group>"; };
 		90B970422A0B70B100BE7DAF /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		90B970442A0B713F00BE7DAF /* Indicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Indicator.swift; sourceTree = "<group>"; };
-		90B970462A0B71FE00BE7DAF /* iOSListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOSListView.swift; sourceTree = "<group>"; };
+		90B970462A0B71FE00BE7DAF /* ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
 		90B970482A0B727A00BE7DAF /* ListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewModel.swift; sourceTree = "<group>"; };
 		90B9704B2A0B732A00BE7DAF /* MobbinApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobbinApp.swift; sourceTree = "<group>"; };
 		90B9704D2A0B76F900BE7DAF /* ScrollDetector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollDetector.swift; sourceTree = "<group>"; };
@@ -170,7 +170,7 @@
 			children = (
 				90B970402A0B70A300BE7DAF /* AppListItem.swift */,
 				90B970422A0B70B100BE7DAF /* LoadingView.swift */,
-				90B970462A0B71FE00BE7DAF /* iOSListView.swift */,
+				90B970462A0B71FE00BE7DAF /* ListView.swift */,
 			);
 			path = List;
 			sourceTree = "<group>";
@@ -371,7 +371,7 @@
 				903946412A0542FE004FF650 /* MobAppModel.swift in Sources */,
 				903946482A0682A7004FF650 /* MobbinStatusButton.swift in Sources */,
 				908E670E2A08F6D4005C5BC8 /* MobbinAvatarView.swift in Sources */,
-				90B970472A0B71FE00BE7DAF /* iOSListView.swift in Sources */,
+				90B970472A0B71FE00BE7DAF /* ListView.swift in Sources */,
 				908E673C2A0A14AB005C5BC8 /* MobbinPlatformPicker.swift in Sources */,
 				90E85BB929FFF80800E69134 /* LoginView.swift in Sources */,
 				90B970492A0B727A00BE7DAF /* ListViewModel.swift in Sources */,

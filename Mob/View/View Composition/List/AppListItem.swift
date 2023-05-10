@@ -29,22 +29,19 @@ struct AppListItem: View {
                 .clipShape(RoundedRectangle(cornerRadius: 20))
                 .shadow(color: .black.opacity(0.15), x: 0, y: 0, blur: 10)
 
-                HStack {
-                    VStack(alignment: .leading, spacing: 8) {
-                        Text(app.appName)
-                            .foregroundColor(.black)
-                            .font(.system(size: 24, weight: .bold))
+                VStack(alignment: .leading, spacing: 8) {
+                    Text(app.appName)
+                        .foregroundColor(.black)
+                        .font(.system(size: 24, weight: .bold))
 
-                        Text(app.appTagline)
-                            .foregroundColor(Color(hexadecimal: "747474"))
-                            .font(.system(size: 16, weight: .semibold))
-                    }
-
-                    Spacer()
+                    Text(app.appTagline)
+                        .foregroundColor(Color(hexadecimal: "747474"))
+                        .font(.system(size: 16, weight: .semibold))
                 }
 
                 Spacer()
             }
+            .frame(width: SwiftUIX.Screen.main.width - 40)
 
             HStack(spacing: 20) {
                 ForEach(app.previewScreenUrls, id: \.self) { previewURL in

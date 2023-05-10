@@ -17,7 +17,7 @@ struct ListView: View {
             if viewModel.apps.isEmpty {
                 LoadingView()
             } else {
-                VStack(spacing: 30) {
+                LazyVStack(spacing: 30) {
                     ForEach(viewModel.apps) { app in
                         AppListItem(app: app)
                     }

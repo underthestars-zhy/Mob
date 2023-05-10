@@ -8,12 +8,14 @@
 import SwiftUI
 
 struct CircleProgressView: View {
+    let lineWidth: Int
     @State var rotate = false
+
     var body: some View {
         Circle()
             .trim(from: 0, to: 3/4)
             .rotation(Angle(degrees: rotate ? 360 : 0))
-            .stroke(Color(hexadecimal: "151515"), style: StrokeStyle(lineWidth: 4, lineCap: .round))
+            .stroke(Color(hexadecimal: "151515"), style: StrokeStyle(lineWidth: CGFloat(lineWidth), lineCap: .round))
             .foregroundColor(.clear)
             .animation(.easeInOut(duration: 2).repeatForever(autoreverses: false), value: rotate)
             .onAppear {
@@ -24,7 +26,7 @@ struct CircleProgressView: View {
 
 struct CircleProgressView_Previews: PreviewProvider {
     static var previews: some View {
-        CircleProgressView()
+        CircleProgressView(lineWidth: 4)
             .padding()
     }
 }

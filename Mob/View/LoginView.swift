@@ -68,7 +68,7 @@ struct LoginView: View {
                             }
                         case .verify:
                             MobbinStatusButton {
-                                CircleProgressView()
+                                CircleProgressView(lineWidth: 4)
                                     .frame(width: 20, height: 20)
                             }
                         case .success:
@@ -88,6 +88,7 @@ struct LoginView: View {
 
                 Spacer()
             }
+            .animation(.easeInOut, value: inputVerifyCode)
         }
     }
 

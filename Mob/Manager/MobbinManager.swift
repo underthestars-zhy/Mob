@@ -61,6 +61,9 @@ class MobbinManager {
         let tokenData = try MobbinManager._Token.convert(token: newToken)
         let userInfoData = try MobbinManager._UserInfo.convert(userInfo: userInfo)
 
+        self.userInfo = userInfo
+        self.token = newToken
+
         UserDefaults.standard.set(tokenData, forKey: "token")
         UserDefaults.standard.set(userInfoData, forKey: "userInfo")
     }

@@ -9,9 +9,14 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        MobbinNavigationView {
-            VStack {
-                
+        MobbinNavigationView { indicator in
+            switch indicator.platform {
+            case .ios:
+                iOSListView(indicator: indicator)
+            case .android:
+                EmptyView()
+            case .web:
+                EmptyView()
             }
         }
         .edgesIgnoringSafeArea(.all)

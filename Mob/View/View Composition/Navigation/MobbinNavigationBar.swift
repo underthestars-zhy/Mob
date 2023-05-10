@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import VisualEffectView
 
 struct MobbinNavigationBar: View {
     @EnvironmentObject var viewModel: NavigationViewModel
@@ -57,7 +58,7 @@ struct MobbinNavigationBar: View {
             }
             .background(Group {
                 if viewModel.stage == .minimal {
-                    Color.white.opacity(0.8).background(.ultraThinMaterial)
+                    VisualEffect(colorTint: .white, colorTintAlpha: 0.8, blurRadius: 15)
                 } else {
                     Color.clear
                 }

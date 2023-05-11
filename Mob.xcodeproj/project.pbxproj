@@ -39,6 +39,7 @@
 		90B970512A0B796600BE7DAF /* Introspect in Frameworks */ = {isa = PBXBuildFile; productRef = 90B970502A0B796600BE7DAF /* Introspect */; };
 		90B970542A0B79B500BE7DAF /* MobbinScrollViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90B970532A0B79B500BE7DAF /* MobbinScrollViewDelegate.swift */; };
 		90B970572A0BC98500BE7DAF /* ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90B970562A0BC98500BE7DAF /* ImageCache.swift */; };
+		90B9705A2A0C8D2400BE7DAF /* MobbinTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90B970592A0C8D2400BE7DAF /* MobbinTabView.swift */; };
 		90E85BB229FF878800E69134 /* MobbinAPI in Frameworks */ = {isa = PBXBuildFile; productRef = 90E85BB129FF878800E69134 /* MobbinAPI */; };
 		90E85BB729FF88C500E69134 /* MobbinManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90E85BB629FF88C500E69134 /* MobbinManager.swift */; };
 		90E85BB929FFF80800E69134 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90E85BB829FFF80800E69134 /* LoginView.swift */; };
@@ -81,6 +82,7 @@
 		90B9704D2A0B76F900BE7DAF /* ScrollDetector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollDetector.swift; sourceTree = "<group>"; };
 		90B970532A0B79B500BE7DAF /* MobbinScrollViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobbinScrollViewDelegate.swift; sourceTree = "<group>"; };
 		90B970562A0BC98500BE7DAF /* ImageCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCache.swift; sourceTree = "<group>"; };
+		90B970592A0C8D2400BE7DAF /* MobbinTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobbinTabView.swift; sourceTree = "<group>"; };
 		90E85BAE29FF614200E69134 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		90E85BB629FF88C500E69134 /* MobbinManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobbinManager.swift; sourceTree = "<group>"; };
 		90E85BB829FFF80800E69134 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
@@ -139,6 +141,7 @@
 		908E67052A08DBEF005C5BC8 /* View Composition */ = {
 			isa = PBXGroup;
 			children = (
+				90B970582A0C894500BE7DAF /* Tab */,
 				90B9703F2A0B707000BE7DAF /* List */,
 				908E67082A08F4EB005C5BC8 /* Navigation */,
 			);
@@ -199,6 +202,14 @@
 				90B970562A0BC98500BE7DAF /* ImageCache.swift */,
 			);
 			path = Cache;
+			sourceTree = "<group>";
+		};
+		90B970582A0C894500BE7DAF /* Tab */ = {
+			isa = PBXGroup;
+			children = (
+				90B970592A0C8D2400BE7DAF /* MobbinTabView.swift */,
+			);
+			path = Tab;
 			sourceTree = "<group>";
 		};
 		90E85BAF29FF650600E69134 /* View */ = {
@@ -377,6 +388,7 @@
 				90E85BB729FF88C500E69134 /* MobbinManager.swift in Sources */,
 				9039464A2A068467004FF650 /* CircleProgressView.swift in Sources */,
 				90B970452A0B713F00BE7DAF /* Indicator.swift in Sources */,
+				90B9705A2A0C8D2400BE7DAF /* MobbinTabView.swift in Sources */,
 				90FBAAB029FD5F0E008D7F4F /* ContentView.swift in Sources */,
 				908E67072A08DC03005C5BC8 /* MobbinNavigationView.swift in Sources */,
 				90B9704E2A0B76F900BE7DAF /* ScrollDetector.swift in Sources */,

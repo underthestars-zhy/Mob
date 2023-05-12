@@ -11,17 +11,17 @@ struct ContentView: View {
     @ObservedObject var indicator = Indicator.shared
 
     var body: some View {
-//        MobbinNavigationView {
-//            ListView()
-//        } onBottom: {
-//            print("on bottom")
-//        }
-//        .edgesIgnoringSafeArea(.all)
-
         MobbinTabView {
-            EmptyView()
+            MobbinNavigationView {
+                ListView()
+            } onBottom: {
+                print("ScrollView: on bottom")
+            }
+            .edgesIgnoringSafeArea(.all)
         } collectionView: {
-            EmptyView()
+            VStack {
+                
+            }
         }
     }
 }

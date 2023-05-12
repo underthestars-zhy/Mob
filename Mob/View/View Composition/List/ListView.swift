@@ -26,7 +26,7 @@ struct ListView: View {
             }
         }
         .onAppear {
-            viewModel.fetchApps()
+            if viewModel.apps.isEmpty { viewModel.fetchApps() }
         }
         .onChange(of: indicator.platform) { _ in
             viewModel.fetchApps()

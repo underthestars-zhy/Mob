@@ -6,31 +6,51 @@
 //
 
 import SwiftUI
+import SwiftUIX
 import Introspect
 
 struct MobbinTabView<BrowseView: View, CollectionView: View>: View {
+    @StateObject var viewModel = TabViewModel()
+
     @ViewBuilder var browseView: () -> BrowseView
     @ViewBuilder var collectionView: () -> CollectionView
 
-    @State var selection = TabState.browse
-
-    enum TabState {
-        case browse
-        case collection
-    }
-
     var body: some View {
-        TabView(selection: $selection) {
+        TabView(selection: $viewModel.currentTab) {
             browseView()
-                .edgesIgnoringSafeArea(.all)
-                .tag(TabState.browse)
+                .tag(TabStatus.browse)
 
             collectionView()
-                .edgesIgnoringSafeArea(.all)
-                .tag(TabState.collection)
+                .tag(TabStatus.collections)
         }
         .introspectTabBarController { (UITabBarController) in
-            UITabBarController.tabBar.isHidden = true
+//            UITabBarController.tabBar.isHidden = true
+//            UITabBarController.tabBar.backgroundColor = .clear
         }
+        .edgesIgnoringSafeArea(.all)
+        .overlay {
+            VStack {
+                Spacer()
+
+                VStack(spacing: 0) {
+                    Spacer()
+
+                    HStack(alignment: .top, spacing: 0) {
+                        TabBarItem(tab: .browse, current: $viewModel.currentTab)
+                            .padding(.leading, 82)
+
+                        Spacer()
+
+                        TabBarItem(tab: .collections, current: $viewModel.currentTab)
+                            .padding(.trailing, 64)
+                    }
+                    .padding(.bottom, 45)
+                }
+                .frame(width: Screen.main.width, height: 110)
+                .background(.black)
+                .clipShape(TopRoundedRectangle(cornerRadius: 25))
+            }
+        }
+        .environmentObject(viewModel)
     }
 }

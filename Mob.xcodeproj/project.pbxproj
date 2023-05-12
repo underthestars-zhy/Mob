@@ -40,6 +40,10 @@
 		90B970542A0B79B500BE7DAF /* MobbinScrollViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90B970532A0B79B500BE7DAF /* MobbinScrollViewDelegate.swift */; };
 		90B970572A0BC98500BE7DAF /* ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90B970562A0BC98500BE7DAF /* ImageCache.swift */; };
 		90B9705A2A0C8D2400BE7DAF /* MobbinTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90B970592A0C8D2400BE7DAF /* MobbinTabView.swift */; };
+		90B9705C2A0E6E8400BE7DAF /* TopRoundRectangle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90B9705B2A0E6E8400BE7DAF /* TopRoundRectangle.swift */; };
+		90B9705E2A0E6ED300BE7DAF /* TabBarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90B9705D2A0E6ED300BE7DAF /* TabBarItem.swift */; };
+		90B970602A0E6EE600BE7DAF /* TabStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90B9705F2A0E6EE600BE7DAF /* TabStatus.swift */; };
+		90B970622A0E6F6E00BE7DAF /* TabViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90B970612A0E6F6E00BE7DAF /* TabViewModel.swift */; };
 		90E85BB229FF878800E69134 /* MobbinAPI in Frameworks */ = {isa = PBXBuildFile; productRef = 90E85BB129FF878800E69134 /* MobbinAPI */; };
 		90E85BB729FF88C500E69134 /* MobbinManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90E85BB629FF88C500E69134 /* MobbinManager.swift */; };
 		90E85BB929FFF80800E69134 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90E85BB829FFF80800E69134 /* LoginView.swift */; };
@@ -83,6 +87,10 @@
 		90B970532A0B79B500BE7DAF /* MobbinScrollViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobbinScrollViewDelegate.swift; sourceTree = "<group>"; };
 		90B970562A0BC98500BE7DAF /* ImageCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCache.swift; sourceTree = "<group>"; };
 		90B970592A0C8D2400BE7DAF /* MobbinTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobbinTabView.swift; sourceTree = "<group>"; };
+		90B9705B2A0E6E8400BE7DAF /* TopRoundRectangle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopRoundRectangle.swift; sourceTree = "<group>"; };
+		90B9705D2A0E6ED300BE7DAF /* TabBarItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarItem.swift; sourceTree = "<group>"; };
+		90B9705F2A0E6EE600BE7DAF /* TabStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabStatus.swift; sourceTree = "<group>"; };
+		90B970612A0E6F6E00BE7DAF /* TabViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabViewModel.swift; sourceTree = "<group>"; };
 		90E85BAE29FF614200E69134 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		90E85BB629FF88C500E69134 /* MobbinManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobbinManager.swift; sourceTree = "<group>"; };
 		90E85BB829FFF80800E69134 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
@@ -116,6 +124,7 @@
 				903946402A0542FE004FF650 /* MobAppModel.swift */,
 				908E670B2A08F5C0005C5BC8 /* NavigationViewModel.swift */,
 				90B970482A0B727A00BE7DAF /* ListViewModel.swift */,
+				90B970612A0E6F6E00BE7DAF /* TabViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -134,6 +143,7 @@
 			children = (
 				908E67032A07D347005C5BC8 /* Platform.swift */,
 				908E67122A08FBEE005C5BC8 /* Section.swift */,
+				90B9705F2A0E6EE600BE7DAF /* TabStatus.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -166,6 +176,7 @@
 				908E67142A094185005C5BC8 /* ScrollOffset.swift */,
 				908E67392A0A0929005C5BC8 /* TouncDown.swift */,
 				90B9704D2A0B76F900BE7DAF /* ScrollDetector.swift */,
+				90B9705B2A0E6E8400BE7DAF /* TopRoundRectangle.swift */,
 			);
 			path = "View Helper";
 			sourceTree = "<group>";
@@ -208,6 +219,7 @@
 			isa = PBXGroup;
 			children = (
 				90B970592A0C8D2400BE7DAF /* MobbinTabView.swift */,
+				90B9705D2A0E6ED300BE7DAF /* TabBarItem.swift */,
 			);
 			path = Tab;
 			sourceTree = "<group>";
@@ -373,6 +385,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				90B9705C2A0E6E8400BE7DAF /* TopRoundRectangle.swift in Sources */,
 				908E67112A08F951005C5BC8 /* SizeInRuntime.swift in Sources */,
 				908E670C2A08F5C0005C5BC8 /* NavigationViewModel.swift in Sources */,
 				908E67152A094185005C5BC8 /* ScrollOffset.swift in Sources */,
@@ -384,6 +397,7 @@
 				90B970542A0B79B500BE7DAF /* MobbinScrollViewDelegate.swift in Sources */,
 				903946372A00BDEF004FF650 /* MobbinTextButton.swift in Sources */,
 				908E670A2A08F4FA005C5BC8 /* MobbinNavigationBar.swift in Sources */,
+				90B970602A0E6EE600BE7DAF /* TabStatus.swift in Sources */,
 				903946462A06823F004FF650 /* MobbinScreenButton.swift in Sources */,
 				90E85BB729FF88C500E69134 /* MobbinManager.swift in Sources */,
 				9039464A2A068467004FF650 /* CircleProgressView.swift in Sources */,
@@ -395,6 +409,7 @@
 				903946412A0542FE004FF650 /* MobAppModel.swift in Sources */,
 				903946482A0682A7004FF650 /* MobbinStatusButton.swift in Sources */,
 				908E670E2A08F6D4005C5BC8 /* MobbinAvatarView.swift in Sources */,
+				90B970622A0E6F6E00BE7DAF /* TabViewModel.swift in Sources */,
 				90B970472A0B71FE00BE7DAF /* ListView.swift in Sources */,
 				908E673C2A0A14AB005C5BC8 /* MobbinPlatformPicker.swift in Sources */,
 				90E85BB929FFF80800E69134 /* LoginView.swift in Sources */,
@@ -404,6 +419,7 @@
 				908E67012A07CD3A005C5BC8 /* MobbinPlatformSwitcher.swift in Sources */,
 				90E85BBC2A0002DA00E69134 /* MobbinTextField.swift in Sources */,
 				90B9704C2A0B732A00BE7DAF /* MobbinApp.swift in Sources */,
+				90B9705E2A0E6ED300BE7DAF /* TabBarItem.swift in Sources */,
 				90B970412A0B70A300BE7DAF /* AppListItem.swift in Sources */,
 				90B970432A0B70B100BE7DAF /* LoadingView.swift in Sources */,
 				90FBAAAE29FD5F0E008D7F4F /* MobApp.swift in Sources */,

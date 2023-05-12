@@ -19,8 +19,10 @@ struct MobApp: App {
                 if let login = appModel.logined {
                     if login {
                         ContentView()
+                            .edgesIgnoringSafeArea(.all)
                     } else {
                         LoginView()
+                            .edgesIgnoringSafeArea(.all)
                     }
                 } else {
                     Image("Launch Screen")

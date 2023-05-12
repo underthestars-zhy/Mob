@@ -15,6 +15,10 @@ class ListViewModel: ObservableObject {
     var lastApp: MobbinApp? = nil
     var loading = false
 
+    init() {
+        print("init Lits VM")
+    }
+
     func fetchApps() {
         apps = []
         lastApp = nil

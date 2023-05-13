@@ -68,20 +68,6 @@ class MobbinManager {
         UserDefaults.standard.set(userInfoData, forKey: "userInfo")
     }
 
-    func save() throws {
-        guard let userInfo, let token else { return }
-
-        let mobbinAPI = MobbinAPI(userInfo: userInfo, token: token)
-
-        let newToken = try mobbinAPI.retrieveToken()
-
-        let tokenData = try MobbinManager._Token.convert(token: newToken)
-        let userInfoData = try MobbinManager._UserInfo.convert(userInfo: userInfo)
-
-        UserDefaults.standard.set(tokenData, forKey: "token")
-        UserDefaults.standard.set(userInfoData, forKey: "userInfo")
-    }
-
     func save(userInfo: UserInfo, token: Token) throws {
         let tokenData = try MobbinManager._Token.convert(token: token)
         let userInfoData = try MobbinManager._UserInfo.convert(userInfo: userInfo)
@@ -105,7 +91,7 @@ class MobbinManager {
         guard Date().timeIntervalSince1970 - token.generatedTime.timeIntervalSince1970 < 86400 else { return false }
 
         let mobbinAPI = MobbinAPI(userInfo: userInfo, token: token)
-        try await mobbinAPI.refreshToken()
+        try? await mobbinAPI.refreshToken()
 
         let newToken = try mobbinAPI.retrieveToken()
 

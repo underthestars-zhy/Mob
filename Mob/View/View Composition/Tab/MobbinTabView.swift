@@ -18,14 +18,13 @@ struct MobbinTabView<BrowseView: View, CollectionView: View>: View {
     var body: some View {
         TabView(selection: $viewModel.currentTab) {
             browseView()
-                .tag(TabStatus.browse)
+                .tag(TabViewModel.TabStatus.browse)
 
             collectionView()
-                .tag(TabStatus.collections)
+                .tag(TabViewModel.TabStatus.collections)
         }
-        .introspectTabBarController { (UITabBarController) in
-//            UITabBarController.tabBar.isHidden = true
-//            UITabBarController.tabBar.backgroundColor = .clear
+        .introspectTabBarController {
+            $0.tabBar.isHidden = true
         }
         .edgesIgnoringSafeArea(.all)
         .overlay {
@@ -49,6 +48,8 @@ struct MobbinTabView<BrowseView: View, CollectionView: View>: View {
                 .frame(width: Screen.main.width, height: 110)
                 .background(.black)
                 .clipShape(TopRoundedRectangle(cornerRadius: 25))
+                .opacity(viewModel.tabBarStage == .ignore ? 0 : 1)
+                .animation(.easeOut, value: viewModel.tabBarStage)
             }
         }
         .environmentObject(viewModel)

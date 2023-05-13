@@ -29,7 +29,16 @@ class NavigationViewModel: ObservableObject {
                 Indicator.shared.section = newValue
             }
             .store(in: &subscribers)
-        
+
+        $exntend
+            .sink { [weak self] newVluae in
+                if newVluae && (self?.stage ?? .normal) == .normal {
+                    selectPlatformPublisher.value = true
+                } else {
+                    selectPlatformPublisher.value = false
+                }
+            }
+            .store(in: &subscribers)
     }
     
 

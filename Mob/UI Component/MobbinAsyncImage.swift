@@ -20,6 +20,9 @@ struct MobbinAsyncImage<ImageView: View, PlaceholderView: View>: View {
             imageView(image)
         } else if let data = KeyFileCache.shared.retrieve(key: url.path()), let image = Image(data: data) {
             imageView(image)
+                .onAppear {
+                    ImageCache.shared.push(image, key: url.path())
+                }
         } else {
             if let imageData, let image = Image(data: imageData) {
                 imageView(image)

@@ -9,9 +9,9 @@ import SwiftUI
 import SwiftUIX
 
 struct TabBarItem: View {
-    let tab: TabStatus
+    let tab: TabViewModel.TabStatus
 
-    @Binding var current: TabStatus
+    @Binding var current: TabViewModel.TabStatus
 
     var body: some View {
         Button {

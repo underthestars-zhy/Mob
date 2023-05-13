@@ -34,13 +34,13 @@ class MobAppModel: ObservableObject {
     }
 
     func beInBackground() {
-        do {
-            print("background")
-            try MobbinManager.shared.save()
-            print("saved")
-        } catch {
-            print(error)
-        }
+//        do {
+//            print("background")
+//            try MobbinManager.shared.save()
+//            print("saved")
+//        } catch {
+//            print(error)
+//        }
     }
 
     func beInInactive() {

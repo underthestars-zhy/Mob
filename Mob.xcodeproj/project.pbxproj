@@ -44,6 +44,8 @@
 		90B9705E2A0E6ED300BE7DAF /* TabBarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90B9705D2A0E6ED300BE7DAF /* TabBarItem.swift */; };
 		90B970602A0E6EE600BE7DAF /* TabStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90B9705F2A0E6EE600BE7DAF /* TabStatus.swift */; };
 		90B970622A0E6F6E00BE7DAF /* TabViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90B970612A0E6F6E00BE7DAF /* TabViewModel.swift */; };
+		90B970642A0F254C00BE7DAF /* KeyFileCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90B970632A0F254C00BE7DAF /* KeyFileCache.swift */; };
+		90B970662A0F269600BE7DAF /* MobbinAsyncImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90B970652A0F269600BE7DAF /* MobbinAsyncImage.swift */; };
 		90E85BB229FF878800E69134 /* MobbinAPI in Frameworks */ = {isa = PBXBuildFile; productRef = 90E85BB129FF878800E69134 /* MobbinAPI */; };
 		90E85BB729FF88C500E69134 /* MobbinManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90E85BB629FF88C500E69134 /* MobbinManager.swift */; };
 		90E85BB929FFF80800E69134 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90E85BB829FFF80800E69134 /* LoginView.swift */; };
@@ -91,6 +93,8 @@
 		90B9705D2A0E6ED300BE7DAF /* TabBarItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarItem.swift; sourceTree = "<group>"; };
 		90B9705F2A0E6EE600BE7DAF /* TabStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabStatus.swift; sourceTree = "<group>"; };
 		90B970612A0E6F6E00BE7DAF /* TabViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabViewModel.swift; sourceTree = "<group>"; };
+		90B970632A0F254C00BE7DAF /* KeyFileCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyFileCache.swift; sourceTree = "<group>"; };
+		90B970652A0F269600BE7DAF /* MobbinAsyncImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobbinAsyncImage.swift; sourceTree = "<group>"; };
 		90E85BAE29FF614200E69134 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		90E85BB629FF88C500E69134 /* MobbinManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobbinManager.swift; sourceTree = "<group>"; };
 		90E85BB829FFF80800E69134 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
@@ -211,6 +215,7 @@
 			isa = PBXGroup;
 			children = (
 				90B970562A0BC98500BE7DAF /* ImageCache.swift */,
+				90B970632A0F254C00BE7DAF /* KeyFileCache.swift */,
 			);
 			path = Cache;
 			sourceTree = "<group>";
@@ -254,6 +259,7 @@
 				903946492A068467004FF650 /* CircleProgressView.swift */,
 				908E67162A094551005C5BC8 /* MobbinSectionButton.swift */,
 				908E673B2A0A14AB005C5BC8 /* MobbinPlatformPicker.swift */,
+				90B970652A0F269600BE7DAF /* MobbinAsyncImage.swift */,
 			);
 			path = "UI Component";
 			sourceTree = "<group>";
@@ -386,6 +392,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				90B9705C2A0E6E8400BE7DAF /* TopRoundRectangle.swift in Sources */,
+				90B970662A0F269600BE7DAF /* MobbinAsyncImage.swift in Sources */,
 				908E67112A08F951005C5BC8 /* SizeInRuntime.swift in Sources */,
 				908E670C2A08F5C0005C5BC8 /* NavigationViewModel.swift in Sources */,
 				908E67152A094185005C5BC8 /* ScrollOffset.swift in Sources */,
@@ -411,6 +418,7 @@
 				908E670E2A08F6D4005C5BC8 /* MobbinAvatarView.swift in Sources */,
 				90B970622A0E6F6E00BE7DAF /* TabViewModel.swift in Sources */,
 				90B970472A0B71FE00BE7DAF /* ListView.swift in Sources */,
+				90B970642A0F254C00BE7DAF /* KeyFileCache.swift in Sources */,
 				908E673C2A0A14AB005C5BC8 /* MobbinPlatformPicker.swift in Sources */,
 				90E85BB929FFF80800E69134 /* LoginView.swift in Sources */,
 				90B970492A0B727A00BE7DAF /* ListViewModel.swift in Sources */,

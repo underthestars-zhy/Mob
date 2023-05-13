@@ -32,6 +32,7 @@ struct MobbinNavigationView<Content: View>: View {
                     }
                     .padding(.top, 30)
                     .padding(.bottom, 30)
+                    .padding(.bottom, 110)
                     .padding(.horizontal, 20)
                 }
                 .measureScroll { scroll in

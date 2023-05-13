@@ -15,28 +15,19 @@ struct AppListItem: View {
     var body: some View {
         VStack(spacing: 20) {
             HStack(spacing: 20) {
-                Group {
-                    if let image = ImageCache.shared.retrieve(key: app.appLogoUrl.path) {
-                        image
-                            .resizable()
-                            .scaledToFit()
-                            .frame(width: 72)
-                    } else {
-                        AsyncImage(url: app.appLogoUrl) { image in
-                            image
-                                .resizable()
-                                .scaledToFit()
-                                .frame(width: 72)
-                                .onAppear {
-                                    ImageCache.shared.push(image, key: app.appLogoUrl.path)
-                                }
-                        } placeholder: {
-                            Image("Icon")
-                                .resizable()
-                                .scaledToFit()
-                                .frame(width: 72)
+                MobbinAsyncImage(url: app.appLogoUrl) { image in
+                    image
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 72)
+                        .onAppear {
+                            ImageCache.shared.push(image, key: app.appLogoUrl.path)
                         }
-                    }
+                } placeholder: {
+                    Image("Icon")
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 72)
                 }
                 .clipShape(RoundedRectangle(cornerRadius: 20))
                 .shadow(color: .black.opacity(0.15), x: 0, y: 0, blur: 10)
@@ -57,28 +48,18 @@ struct AppListItem: View {
 
             HStack(spacing: 20) {
                 ForEach(app.previewScreenUrls, id: \.self) { previewURL in
-                    Group {
-                        if let image = ImageCache.shared.retrieve(key: previewURL.path) {
-                            image
-                                .resizable()
-                                .scaledToFit()
-                                .frame(width: calPreviewWidth())
-                                .draggable(image)
-                        } else {
-                            AsyncImage(url: previewURL) { image in
-                                image
-                                    .resizable()
-                                    .scaledToFit()
-                                    .frame(width: calPreviewWidth())
-                                    .draggable(image)
-                                    .onAppear {
-                                        ImageCache.shared.push(image, key: previewURL.path)
-                                    }
-                            } placeholder: {
-                                Color.white
-                                    .frame(width: calPreviewWidth(), height: calPreviewWidth() / 1125 * 2436)
+                    MobbinAsyncImage(url: previewURL) { image in
+                        image
+                            .resizable()
+                            .scaledToFit()
+                            .frame(width: calPreviewWidth())
+                            .draggable(image)
+                            .onAppear {
+                                ImageCache.shared.push(image, key: previewURL.path)
                             }
-                        }
+                    } placeholder: {
+                        Color.white
+                            .frame(width: calPreviewWidth(), height: calPreviewWidth() / 1125 * 2436)
                     }
                     .clipShape(RoundedRectangle(cornerRadius: 10))
                     .overlay {

@@ -28,6 +28,7 @@
 		908E67382A0A0805005C5BC8 /* KeyboardBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 908E67372A0A0805005C5BC8 /* KeyboardBackground.swift */; };
 		908E673A2A0A0929005C5BC8 /* TouncDown.swift in Sources */ = {isa = PBXBuildFile; fileRef = 908E67392A0A0929005C5BC8 /* TouncDown.swift */; };
 		908E673C2A0A14AB005C5BC8 /* MobbinPlatformPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 908E673B2A0A14AB005C5BC8 /* MobbinPlatformPicker.swift */; };
+		90B2F7512A0FB4C800D7048C /* MobbinFloatItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90B2F7502A0FB4C800D7048C /* MobbinFloatItem.swift */; };
 		90B9703E2A0B4E8300BE7DAF /* VisualEffectView in Frameworks */ = {isa = PBXBuildFile; productRef = 90B9703D2A0B4E8300BE7DAF /* VisualEffectView */; };
 		90B970412A0B70A300BE7DAF /* AppListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90B970402A0B70A300BE7DAF /* AppListItem.swift */; };
 		90B970432A0B70B100BE7DAF /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90B970422A0B70B100BE7DAF /* LoadingView.swift */; };
@@ -79,6 +80,7 @@
 		908E67372A0A0805005C5BC8 /* KeyboardBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardBackground.swift; sourceTree = "<group>"; };
 		908E67392A0A0929005C5BC8 /* TouncDown.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TouncDown.swift; sourceTree = "<group>"; };
 		908E673B2A0A14AB005C5BC8 /* MobbinPlatformPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobbinPlatformPicker.swift; sourceTree = "<group>"; };
+		90B2F7502A0FB4C800D7048C /* MobbinFloatItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobbinFloatItem.swift; sourceTree = "<group>"; };
 		90B970402A0B70A300BE7DAF /* AppListItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppListItem.swift; sourceTree = "<group>"; };
 		90B970422A0B70B100BE7DAF /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		90B970442A0B713F00BE7DAF /* Indicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Indicator.swift; sourceTree = "<group>"; };
@@ -260,6 +262,7 @@
 				908E67162A094551005C5BC8 /* MobbinSectionButton.swift */,
 				908E673B2A0A14AB005C5BC8 /* MobbinPlatformPicker.swift */,
 				90B970652A0F269600BE7DAF /* MobbinAsyncImage.swift */,
+				90B2F7502A0FB4C800D7048C /* MobbinFloatItem.swift */,
 			);
 			path = "UI Component";
 			sourceTree = "<group>";
@@ -417,6 +420,7 @@
 				908E670E2A08F6D4005C5BC8 /* MobbinAvatarView.swift in Sources */,
 				90B970622A0E6F6E00BE7DAF /* TabViewModel.swift in Sources */,
 				90B970472A0B71FE00BE7DAF /* ListView.swift in Sources */,
+				90B2F7512A0FB4C800D7048C /* MobbinFloatItem.swift in Sources */,
 				90B970642A0F254C00BE7DAF /* KeyFileCache.swift in Sources */,
 				908E673C2A0A14AB005C5BC8 /* MobbinPlatformPicker.swift in Sources */,
 				90B970682A0F35B800BE7DAF /* SelectPlatformPublisher.swift in Sources */,

@@ -10,6 +10,7 @@ import SwiftUI
 struct LoginView: View {
     @StateObject var viewModel = LoginViewModel()
 
+    @FocusState var inputEmail: Bool
     @FocusState var inputVerifyCode: Bool
 
     var body: some View {
@@ -31,9 +32,11 @@ struct LoginView: View {
                             .keyboardType(.emailAddress)
                             .autocorrectionDisabled()
                             .textInputAutocapitalization(.never)
+                            .focused($inputEmail)
                             .onChange(of: viewModel.email) { _ in
                                 viewModel.emailSent = false
                                 viewModel.status = .nothing
+                                inputEmail = false
                             }
                             .disabled(viewModel.status != .nothing)
                     }

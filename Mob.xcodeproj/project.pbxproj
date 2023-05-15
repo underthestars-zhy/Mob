@@ -29,6 +29,8 @@
 		908E673A2A0A0929005C5BC8 /* TouncDown.swift in Sources */ = {isa = PBXBuildFile; fileRef = 908E67392A0A0929005C5BC8 /* TouncDown.swift */; };
 		908E673C2A0A14AB005C5BC8 /* MobbinPlatformPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 908E673B2A0A14AB005C5BC8 /* MobbinPlatformPicker.swift */; };
 		90B2F7512A0FB4C800D7048C /* MobbinFloatItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90B2F7502A0FB4C800D7048C /* MobbinFloatItem.swift */; };
+		90B2F7532A127FAC00D7048C /* MobbinNavFloatBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90B2F7522A127FAC00D7048C /* MobbinNavFloatBar.swift */; };
+		90B2F7552A1281A300D7048C /* UIScrollView+ReachTop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90B2F7542A1281A300D7048C /* UIScrollView+ReachTop.swift */; };
 		90B9703E2A0B4E8300BE7DAF /* VisualEffectView in Frameworks */ = {isa = PBXBuildFile; productRef = 90B9703D2A0B4E8300BE7DAF /* VisualEffectView */; };
 		90B970412A0B70A300BE7DAF /* AppListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90B970402A0B70A300BE7DAF /* AppListItem.swift */; };
 		90B970432A0B70B100BE7DAF /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90B970422A0B70B100BE7DAF /* LoadingView.swift */; };
@@ -81,6 +83,8 @@
 		908E67392A0A0929005C5BC8 /* TouncDown.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TouncDown.swift; sourceTree = "<group>"; };
 		908E673B2A0A14AB005C5BC8 /* MobbinPlatformPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobbinPlatformPicker.swift; sourceTree = "<group>"; };
 		90B2F7502A0FB4C800D7048C /* MobbinFloatItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobbinFloatItem.swift; sourceTree = "<group>"; };
+		90B2F7522A127FAC00D7048C /* MobbinNavFloatBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobbinNavFloatBar.swift; sourceTree = "<group>"; };
+		90B2F7542A1281A300D7048C /* UIScrollView+ReachTop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIScrollView+ReachTop.swift"; sourceTree = "<group>"; };
 		90B970402A0B70A300BE7DAF /* AppListItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppListItem.swift; sourceTree = "<group>"; };
 		90B970422A0B70B100BE7DAF /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		90B970442A0B713F00BE7DAF /* Indicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Indicator.swift; sourceTree = "<group>"; };
@@ -171,6 +175,7 @@
 				908E67062A08DC03005C5BC8 /* MobbinNavigationView.swift */,
 				908E67092A08F4FA005C5BC8 /* MobbinNavigationBar.swift */,
 				908E670D2A08F6D3005C5BC8 /* MobbinAvatarView.swift */,
+				90B2F7522A127FAC00D7048C /* MobbinNavFloatBar.swift */,
 			);
 			path = Navigation;
 			sourceTree = "<group>";
@@ -183,6 +188,7 @@
 				908E67392A0A0929005C5BC8 /* TouncDown.swift */,
 				90B9704D2A0B76F900BE7DAF /* ScrollDetector.swift */,
 				90B9705B2A0E6E8400BE7DAF /* TopRoundRectangle.swift */,
+				90B2F7542A1281A300D7048C /* UIScrollView+ReachTop.swift */,
 			);
 			path = "View Helper";
 			sourceTree = "<group>";
@@ -415,10 +421,12 @@
 				90FBAAB029FD5F0E008D7F4F /* ContentView.swift in Sources */,
 				908E67072A08DC03005C5BC8 /* MobbinNavigationView.swift in Sources */,
 				90B9704E2A0B76F900BE7DAF /* ScrollDetector.swift in Sources */,
+				90B2F7532A127FAC00D7048C /* MobbinNavFloatBar.swift in Sources */,
 				903946412A0542FE004FF650 /* MobAppModel.swift in Sources */,
 				903946482A0682A7004FF650 /* MobbinStatusButton.swift in Sources */,
 				908E670E2A08F6D4005C5BC8 /* MobbinAvatarView.swift in Sources */,
 				90B970622A0E6F6E00BE7DAF /* TabViewModel.swift in Sources */,
+				90B2F7552A1281A300D7048C /* UIScrollView+ReachTop.swift in Sources */,
 				90B970472A0B71FE00BE7DAF /* ListView.swift in Sources */,
 				90B2F7512A0FB4C800D7048C /* MobbinFloatItem.swift in Sources */,
 				90B970642A0F254C00BE7DAF /* KeyFileCache.swift in Sources */,

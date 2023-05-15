@@ -88,7 +88,10 @@ class MobbinManager {
         let token = try Self._Token.convert(data: tokenData)
         let userInfo = try Self._UserInfo.convert(data: userInfoData)
 
-        guard Date().timeIntervalSince1970 - token.generatedTime.timeIntervalSince1970 < 86400 else { return false }
+        guard (Date().timeIntervalSince1970 - token.generatedTime.timeIntervalSince1970) < 86400 else {
+            print("Out of Token Time")
+            return false
+        }
 
         let mobbinAPI = MobbinAPI(userInfo: userInfo, token: token)
         try? await mobbinAPI.refreshToken()

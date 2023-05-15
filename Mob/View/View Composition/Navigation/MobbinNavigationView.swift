@@ -63,6 +63,7 @@ struct MobbinNavigationView<Content: View>: View {
             }
             .introspectScrollView { uiScrollView in
                 uiScrollView.delegate = scrollViewDelegate
+                viewModel.uikitScrollView = uiScrollView
             }
             .coordinateSpace(name: "scroll")
             .navigationBarHidden(true)
@@ -71,6 +72,9 @@ struct MobbinNavigationView<Content: View>: View {
                 onBottom()
                 Indicator.shared.onBottom = value
             }
+        }
+        .overlay {
+            MobbinNavFloatBar()
         }
         .overlay {
             VStack(spacing: 0) {

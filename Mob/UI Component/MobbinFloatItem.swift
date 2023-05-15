@@ -22,20 +22,26 @@ struct MobbinFloatItem<Full: View, Compress: View>: View {
     }
 
     var body: some View {
-        HStack {
-            if extend {
-                HStack {
-                    full
+        Button {
+            action()
+        } label: {
+            HStack {
+                if extend {
+                    HStack {
+                        full
+                    }
+                    .padding(.horizontal, 15)
+                } else {
+                    HStack {
+                        compress
+                    }
+                    .frame(width: 44)
                 }
-            } else {
-                HStack {
-                    compress
-                }
-                .frame(width: 44)
             }
+            .frame(height: 44)
+            .background(.black)
+            .cornerRadius(22)
         }
-        .background(.black)
-        .cornerRadius(22)
     }
 }
 
@@ -56,8 +62,8 @@ struct MobbinFloatSearchItem: View {
                     .foregroundColor(.white)
             }
         } compress: {
-            Text("Search")
-                .font(.system(size: 18, weight: .medium))
+            Image(systemName: "magnifyingglass")
+                .font(.system(size: 21, weight: .medium))
                 .foregroundColor(.white)
         }
     }

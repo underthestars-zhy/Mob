@@ -15,6 +15,8 @@ class NavigationViewModel: ObservableObject {
     @Published var stage = Stage.normal 
     @Published var currentSection: Section = .apps
 
+    var uikitScrollView: UIScrollView? = nil
+
     private var subscribers: [AnyCancellable] = []
 
     init() {

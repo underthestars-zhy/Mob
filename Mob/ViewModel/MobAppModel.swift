@@ -45,6 +45,7 @@ class MobAppModel: ObservableObject {
 
     func beInInactive() {
         print("inactive")
+        guard logined ?? false else { return }
         Task {
             do {
                 try await MobbinManager.shared.update()
